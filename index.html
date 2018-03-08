@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CartOwl</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script type="text/javascript" src="js/cart.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+
+			<h1 style="color: #2196F3;">CartOwl</h1>
+
+			<div class="card" ng-app="ShopCart" ng-controller="cartCont">
+				<div class="topnav">
+					<img src="images/shopping-cart.png" width="48px" height="48px">
+					<p style="padding-left: 36px; font-size: 1.1em">MY SHOPPING CART</p>
+				</div>
+
+				<!-- Column Titles -->
+				<div class="columnTitle" style="padding-top: 0.6vmax;">
+					<p class="product">PRODUCT</p>
+					<p class="colSub">QUANTITY</p>
+					<p class="colSub">PRICE</p>
+					<p class="colSub">SUBTOTAL</p>
+				</div>
+
+				<!-- Cart Items -->
+				<div class="cartItems">
+					<div class="newproduct">
+						<div class="namedesc">
+							<span class="name"> Redmi Note 5 Pro (Lake Blue, 64GB)</span>
+							<span class="description">
+								4GB RAM | 64GB ROM | 5.99 inch Full HD+ Display<br>
+								12MP + 5MP Dual Rear Camera | 20MP Front Camera
+							</span>
+						</div>
+						<div class="moreinfo">
+							<input type="number" ng-model="onequant" min="0" style="text-align: center;">
+						</div>
+						<div class="moreinfo">
+							<span> ₹ 13,999 </span>
+						</div>
+						<div class="moreinfo">
+							<span class="subT1"> ₹ {{ res1() }}</span>
+						</div>
+					</div>
+					<hr style="margin-left: 64px; margin-right: 64px;">
+
+					<div class="newproduct">
+						<div class="namedesc">
+							<span class="name"> Moto G5s Plus (Lunar Gray, 64GB)</span>
+							<span class="description">
+								4GB RAM | 64GB ROM | 5.5 inch Full HD Display<br>
+								13MP + 13MP Dual Rear Camera | 8MP Front Camera
+							</span>
+						</div>
+						<div class="moreinfo">
+							<input type="number" ng-model="twoquant" min="0" style="text-align: center;">
+						</div>
+						<div class="moreinfo">
+							<span> ₹ 14,750 </span>
+						</div>
+						<div class="moreinfo">
+							<span class="subT2"> ₹ {{ res2() }}</span>
+						</div>
+					</div>
+					<hr style="margin-left: 64px; margin-right: 64px;">
+
+					<div class="newproduct" style="padding-bottom: 1.5vmax;">
+						<div class="namedesc">
+							<span class="name"> Mi A1 (Red, 64GB)</span>
+							<span class="description">
+								4GB RAM | 64GB ROM | 5.5 inch Full HD Display<br>
+								12MP + 12MP Dual Rear Camera | 5MP Front Camera
+							</span>
+						</div>
+						<div class="moreinfo">
+							<input type="number" ng-model="threequant" min="0" style="text-align: center;">
+						</div>
+						<div class="moreinfo">
+							<span> ₹13,999 </span>
+						</div>
+						<div class="moreinfo">
+							<span class="subT3"> ₹ {{ res3() }}</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="lastrow">
+					<div class="empty"></div>
+					<div class="mytotalclass">
+						<span>TOTAL</span>
+						<span style="padding-left: 24px;"> ₹ {{ gtotal() }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
