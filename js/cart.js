@@ -6,6 +6,10 @@ myApp.controller("cartCont", function($scope) {
 	$scope.price2 = 0;
 	$scope.price3 = 0;
 
+	$scope.onequant = 0;
+	$scope.twoquant = 0;
+	$scope.threequant = 0;
+
 	$scope.res1 = function() {
 		$scope.price1 = $scope.onequant * 13999;
 		return $scope.price1;

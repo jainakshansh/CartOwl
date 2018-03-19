@@ -15,7 +15,7 @@
 
 			<h1 style="color: #2196F3;">CartOwl</h1>
 
-			<div class="card" ng-app="ShopCart" ng-controller="cartCont">
+			<div class="card" ng-app="ShopCart" ng-controller="cartCont" ng-init="res1=0;res2=0'res3=0">
 				<div class="topnav">
 					<img src="images/shopping-cart.png" width="48px" height="48px">
 					<p style="padding-left: 36px; font-size: 1.1em">MY SHOPPING CART</p>
@@ -83,7 +83,7 @@
 							<input type="number" ng-model="threequant" min="0" style="text-align: center;">
 						</div>
 						<div class="moreinfo">
-							<span> ₹13,999 </span>
+							<span> ₹ 13,999 </span>
 						</div>
 						<div class="moreinfo">
 							<span class="subT3"> ₹ {{ res3() }}</span>
